@@ -1,0 +1,18 @@
+{
+  "name": "crutch/clock-dev",
+  "type": "library",
+  "description": "psr/clock implementation for testing",
+  "license": ["MIT"],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "psr/clock": "^1.0"
+  },
+  "provide": {
+    "psr/clock-implementation": "1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Crutch\\DevClock\\": "src/"
+    }
+  }
+}
