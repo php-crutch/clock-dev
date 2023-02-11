@@ -19,7 +19,7 @@ final class ClockWaited implements ClockInterface
     ) {
         $this->timezone = $timezone ?? new DateTimeZone('UTC');
         $now = new DateTimeImmutable();
-        $this->offset = $begin->getTimestamp() - $now->getTimestamp();
+        $this->offset = (is_null($begin) ? 0 : $begin->getTimestamp()) - $now->getTimestamp();
     }
 
     public function wait(int $seconds): void
